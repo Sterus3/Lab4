@@ -24,6 +24,9 @@ elif [[ $1 == "-h" || $1 == "--help" ]]; then
   echo "# -l/--logs <liczba_plikow>: Tworzy określoną liczbę plików log."
   echo "# -h/--help: Wyświetla wszystkie dostępne opcje."
 
+elif [[ $1 == "--init" ]]; then
+  git clone https://github.com/Sterus3/Lab4 && cd lab4 && export PATH=$PATH:$(pwd)
+
 elif [[ $1 == "-e" || $1 == "--error" ]]; then
   wprowadzona_liczba=$2
 
