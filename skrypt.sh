@@ -7,7 +7,7 @@ elif [[ $1 == "--logs" ]]; then
   wprowadzona_liczba=$2
 
   if [[ -z $wprowadzona_liczba ]]; then
-    echo "Nie podano liczby plików. Po użyciu funkcji --logs, wpisz ilość plików, które chcesz utworzyć"
+    echo " Nie podano liczby plików. Po użyciu funkcji --logs, wpisz ilość plików, które chcesz utworzyć "
     exit 1
   fi
 
@@ -17,5 +17,10 @@ elif [[ $1 == "--logs" ]]; then
     echo "Nazwa skryptu: skrypt.sh" >> $nazwa_pliku
     echo "Data utworzenia: $(date +%d-%m-%Y)" >> $nazwa_pliku
   done
-fi
 
+elif [[ $1 == "--help" ]]; then
+  echo "Dostępne opcje:"
+  echo "# --date: Wyświetla dzisiejszą datę."
+  echo "# --logs <liczba_plikow>: Tworzy określoną liczbę plików log."
+  echo "# --help: Wyświetla wszystkie dostępne opcje."
+fi
