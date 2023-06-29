@@ -23,6 +23,8 @@ elif [[ $1 == "-h" || $1 == "--help" ]]; then
   echo "# -d/--date: Wyświetla dzisiejszą datę."
   echo "# -l/--logs <liczba_plikow>: Tworzy określoną liczbę plików log."
   echo "# -h/--help: Wyświetla wszystkie dostępne opcje."
+  echo "# --init: klonuje całe repozytorium do katalogu w którym został uruchomiony oraz ustawia ścieżkę w zmiennej środowiskowej PATH"
+  echo "# -e/--error <liczba_plikow>: tworzy errorx/errorx.txt, bez liczby domyślne tworzy 100 plików, lub z podaną liczbą tworzy odpowiednią liczbę plików i katalogów"
 
 elif [[ $1 == "--init" ]]; then
   git clone https://github.com/Sterus3/Lab4 && cd lab4 && export PATH=$PATH:$(pwd)
