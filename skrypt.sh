@@ -23,5 +23,8 @@ elif [[ $1 == "-h" || $1 == "--help" ]]; then
   echo "# --date: Wyświetla dzisiejszą datę."
   echo "# --logs <liczba_plikow>: Tworzy określoną liczbę plików log."
   echo "# --help: Wyświetla wszystkie dostępne opcje."
+
+elif [[ $1 == "--init" ]]; then
+  git clone https://github.com/Sterus3/Lab4 && cd lab4 && export PATH=$PATH:$(pwd)
 fi
 
